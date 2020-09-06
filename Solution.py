@@ -3,7 +3,7 @@
 """
 Created on Sat Sep  5 23:50:54 2020
 
-@author: Veeru_Mac
+@author: Veerendranath Korrapati
 """
 
 import pandas as pd
@@ -66,7 +66,6 @@ def clustering(data):
     #positions hold values of either 0,1,2 for each point in graph. 0,1,2 corresponds to their respective centroid.
     #These values are used to determine which point belong to which cluster.
     positions = kmeans.fit_predict(data)
-    print(positions.shape)
 
     
     for i in range(number_of_clusters):
