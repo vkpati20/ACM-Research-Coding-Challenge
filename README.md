@@ -13,13 +13,11 @@ Reads data from CSV file, plots current dataset, returns V1 and V2 column set as
 <br>
 
 ### elbowMethod(data)
-<br>
 Takes Pandas DataFrame, with V1 and V2 columns, as parameter and uses Elbow Method to determine number of clusters<br><br>
 For each sample value of k, I'm calculating average of the squared distances from the cluster centers of the respective clusters, storing the results in distortions list.<br>
 Then I uses the values in distortion list to identify the 'bend' in the graph to determine the value for number of clusters
 
 ### clustering(data)
-<br>
 Takes Pandas DataFrame, with V1 and V2 columns, as parameter and uses KMeans algorithm to group datapoints based on number of clusters
 <br><br>
 Algorithm: 
