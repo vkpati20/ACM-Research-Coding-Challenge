@@ -12,6 +12,8 @@ from scipy.spatial.distance import cdist
 from sklearn.cluster import KMeans
 import numpy as np
 
+
+#To read data and return dataset columns as Pandas DataFrame
 def readData():
     df = pd.read_csv("ClusterPlot.csv")
     df.plot(kind='scatter',x='V1',y='V2',color='blue')
@@ -19,6 +21,7 @@ def readData():
     return df.drop(df.columns[0], axis=1)
 
 
+#To identify number of clusters
 def elbowMethod(data):    
     distortions = []
     K = range(1,10)
@@ -30,7 +33,7 @@ def elbowMethod(data):
     #Plotting the Elbow curve
     plt.plot(K, distortions, 'bx-')
     plt.xlabel('k')
-    plt.ylabel('Sum_of_squared_distances')
+    plt.ylabel('Distortions')
     plt.title('Elbow Method For Optimal k')
     plt.show()
 
@@ -44,13 +47,15 @@ def getColor(i):
     else:
         return 'yellow'
 
+#To classify points based on number of clusters
 def clustering(data):
+    print("Judging by the location of the 'bend' in the graph, a good choice for number of clusters is 3")
     number_of_clusters=3
     
-    kmeans = KMeans(n_clusters=number_of_clusters) #defining number of clusters
-    kmeans.fit(data)  #fit kmeans object to dataset
+    kmeans = KMeans(n_clusters=number_of_clusters) 
+    kmeans.fit(data)
     
-    #Identifying the clusters
+    #Identifying the centroids
     centroids = kmeans.cluster_centers_
     
     #positions hold values of either 0,1,2 for each point in graph. 0,1,2 corresponds to their respective centroid.
@@ -73,7 +78,6 @@ def clustering(data):
 if __name__== "__main__":
     data = readData()
     elbowMethod(data)
-    print("Judging by the location of the 'bend' in the graph, a good choice for number of clusters is 3")
     clustering(data)
 
 
