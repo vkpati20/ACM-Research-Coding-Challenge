@@ -38,5 +38,6 @@ From the graph, we can infer that the 'bend' occurs at k=3, therefore, number of
 ## Sources
 To Find optimal Clusters (Elbow Method):
 https://pythonprogramminglanguage.com/kmeans-elbow-method/
+<br>
 To perform KMeans clustering: 
 https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1
