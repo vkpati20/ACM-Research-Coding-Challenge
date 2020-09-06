@@ -26,7 +26,16 @@ Algorithm:
 Starts with randomly selected centroids(for each cluster), then performs repetitive calculations to optimize for best positions of the centroid. Then performs calculations to catagorize points in the dataset  into a cluster.
 
 ## Results
-  
+### Dataset Graph
+![](images/dataset.png)
+
+### Elbow Graph
+From the graph, we can infer that the 'bend' occurs at k=3, therefore, number of clusters = 3
+![](images/elbowGraph.png)
+
+### Cluster Graph
+![](images/clustering.png)
+
 
 ## Sources
 To Find optimal Clusters (Elbow Method):
