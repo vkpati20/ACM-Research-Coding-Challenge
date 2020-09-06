@@ -32,7 +32,7 @@ From the graph, we can infer that the 'bend' occurs at k=3, therefore, number of
 ![](images/elbowGraph.png)
 
 ### Cluster Graph
-Black Mark: Centroid for respective cluster
+Black Marker: Centroid for respective cluster<br>
 ![](images/clustering.png)
 
 
