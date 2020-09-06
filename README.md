@@ -23,7 +23,7 @@ Then I uses the values in distortion list to identify the 'bend' in the graph to
 Takes Pandas DataFrame, with V1 and V2 columns, as parameter and uses KMeans algorithm to group datapoints based on number of clusters
 <br><br>
 Algorithm: 
-Starts with randomly selected centroids(for each cluster), then performs repetitive calculations to optimize for best positions of the centroid. Then performs calculations to which point in the dataset belong to a cluster and classify it.
+Starts with randomly selected centroids(for each cluster), then performs repetitive calculations to optimize for best positions of the centroid. Then performs calculations to catagorize points in the dataset  into a cluster.
 
 ## Results
   
